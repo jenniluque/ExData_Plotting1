@@ -9,7 +9,7 @@ power_consum = power_consum[power_consum$Date >= "2007-02-01",]
 date = as.POSIXct(paste(power_consum$Date, power_consum$Time))
 
 #plot in the same axis: sub_metering_1 (black), sub_metering_2 (red) and submetering_3 (blue) with a legend
-plot(file = "./plot3.png")
+png(file = "./plot3.png")
 with(power_consum, plot(date, Sub_metering_1, col = "black", type = "l", xlab = "", ylab = "Energy sub metering"))
 with(subset(power_consum), lines(date, Sub_metering_2, col = "red"))
 with(subset(power_consum), lines(date, Sub_metering_3, col = "blue"))

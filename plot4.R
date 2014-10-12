@@ -8,6 +8,7 @@ power_consum = power_consum[power_consum$Date <= "2007-02-02",]
 power_consum = power_consum[power_consum$Date >= "2007-02-01",]
 date = as.POSIXct(paste(power_consum$Date, power_consum$Time))
 
+#plot four plots in a 2x2 grid
 png("./plot4.png")
 par(mfrow=c(2,2))
 #plot (1,1)
